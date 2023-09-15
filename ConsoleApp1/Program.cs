@@ -71,7 +71,7 @@ do
             a = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Введите второе число:");
             b = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Итог:" + (((a + b) * 100) / 200) + "%"); // честно говоря, не оч понятно вообще как считать процент от числа :,(
+            Console.WriteLine("Итог:" + ((a * 100) / b) + "%");
             break;
         case "8":
             static long factorial(long n) 
