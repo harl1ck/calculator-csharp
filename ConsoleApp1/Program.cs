@@ -1,6 +1,4 @@
 ﻿string menu;
-int a;
-int b;
 
 do 
 {
@@ -20,30 +18,30 @@ do
     {
         case "1":
             Console.WriteLine("Введите первое число:");
-            a = Convert.ToInt32(Console.ReadLine());
+            var a = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Введите второе число:");
-            b = Convert.ToInt32(Console.ReadLine());
+            var b = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Итог:" + (a + b));
             break;
         case "2":
             Console.WriteLine("Введите первое число:");
-            a = Convert.ToInt32(Console.ReadLine());
+            a = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Введите второе число:");
-            b = Convert.ToInt32(Console.ReadLine());
+            b = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Итог:" + (a - b));
             break;
         case "3":
             Console.WriteLine("Введите первое число:");
-            a = Convert.ToInt32(Console.ReadLine());
+            a = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Введите второе число:");
-            b = Convert.ToInt32(Console.ReadLine());
+            b = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Итог:" + (a * b));
             break;
         case "4":
             Console.WriteLine("Введите первое число:");
-            a = Convert.ToInt32(Console.ReadLine());
+            a = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Введите второе число:");
-            b = Convert.ToInt32(Console.ReadLine());
+            b = Convert.ToDouble(Console.ReadLine());
             if (b == 0)
             {
                 Console.WriteLine("Деление на 0 не возможно!");
@@ -56,22 +54,22 @@ do
             break;
         case "5":
             Console.WriteLine("Введите первое число:");
-            a = Convert.ToInt32(Console.ReadLine());
+            a = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Введите второе число:");
-            b = Convert.ToInt32(Console.ReadLine());
+            b = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Итог:" + (System.Math.Pow(a, b)));
             break;
         case "6":
             Console.WriteLine("Введите число:");
-            a = Convert.ToInt32(Console.ReadLine());
+            a = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Итог:" + (System.Math.Sqrt(a)));
             break;
         case "7":
-            Console.WriteLine("Введите первое число:");
-            a = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Введите второе число:");
-            b = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Итог:" + ((a * 100) / b) + "%");
+            Console.WriteLine("Введите процент:");
+            a = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Введите число:");
+            b = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Итог:" + ((a /100) * b) + "%");
             break;
         case "8":
             static long factorial(long n) 
@@ -89,12 +87,9 @@ do
                 }
             }
             Console.WriteLine("Введите число:");
-            a = Convert.ToInt32(Console.ReadLine());
-            long x = factorial(a);
+            a = Convert.ToDouble(Console.ReadLine());
+            long x = factorial(Convert.ToInt64(a));
             Console.WriteLine("Итог:" + x);
-            break;
-        case "9":
-            Console.WriteLine("До свидания.");
             break;
         default:
             Console.WriteLine("Пока.");
